@@ -1,0 +1,178 @@
+/* Base styles */
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background-color: #000;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; /* Add this line */
+    min-height: 100vh; /* Add this line */
+}
+
+.header {
+    width: 100%;
+    background-color: #111;
+    padding: 20px;
+    box-shadow: 0 1px 2px rgba(255, 255, 255, 0.1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Center the recording button */
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; /* Add this line */
+    width: 100%;
+    max-width: 1200px; /* Add this line to limit the maximum width */
+    padding: 20px; /* Add some padding */
+}
+
+.controls {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+/* Button styles for recording toggle */
+#toggle-btn {
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s, color 0.2s;
+    background-color: #7D3C98; /* Mic off */
+    color: #fff;
+}
+
+.mic-on {
+    background-color: #f21361; /* Mic on */
+    color: #fff;
+}
+
+/* Formatting for transcript and legend */
+.transcript-container {
+    display: flex;
+    justify-content: center; /* Change this from space-between to center */
+    align-items: flex-start; /* Add this line */
+    gap: 20px;
+    width: 100%; /* Add this line */
+}
+
+.transcript, .legend {
+    background-color: #111;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(255, 255, 255, 0.1);
+    max-height: 70vh; /* Change fixed height to max-height */
+    overflow-y: auto;
+}
+
+.transcript {
+    width: 60%; /* Adjust width */
+    height: 500px; /* Fixed height */
+    overflow-y: auto; /* Add scrollbar if content exceeds height */
+}
+
+.legend {
+    width: 30%; /* Adjust width */
+    height: 500px; /* Fixed height */
+    overflow-y: auto; /* Add scrollbar if content exceeds height */
+}
+
+#transcript-text {
+    white-space: pre-wrap;
+    background-color: #1a1a1a;
+    padding: 10px;
+    border-radius: 10px;
+    height: 100%; /* Fill the entire transcript container */
+    color: #e0e0e0;
+    text-align: left;
+    overflow-y: auto; /* Add scrollbar if content exceeds height */
+}
+
+/* Category-specific styles */
+.emotional-states { text-decoration: underline; }
+.thought-processes { font-weight: bold; }
+.problem-solving { background-color: #FFD54F; color: #000; }
+.coping-support { background-color: #FFB74D; color: #000; }
+.insights { font-style: italic; }
+
+.attitude-blame { color: #EF9A9A; }
+.attitude-acceptance { color: #80DEEA; }
+
+.personal-context { color: #B0BEC5; }
+.challenging-thoughts { color: #CE93D8; }
+
+/* Scrollbar customization */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #1a1a1a;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #333;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+
+/* Legend styles */
+.legend p {
+    margin: 5px 0; /* Increased from 2px to 5px */
+    padding: 4px 2px; /* Increased vertical padding from 2px to 4px */
+    border-radius: 3px;
+}
+
+.yellow-bg, .orange-bg {
+    display: inline-block;
+    width: 10px; /* Reduced from 20px to 15px */
+    height: 10px; /* Reduced from 20px to 15px */
+    vertical-align: middle;
+    margin-left: 3px; /* Reduced from 5px to 3px */
+}
+
+.yellow-bg {
+    background-color: #FFD54F;
+}
+
+.orange-bg {
+    background-color: #FFB74D;
+}
+
+.attitude-details {
+    margin-top: 2px;
+    padding-left: 8px;
+}
+
+.attitude-blame, .attitude-acceptance {
+    margin-right: 6px; /* Changed from margin-left to margin-right */
+}
+
+.attitude-blame { color: #EF9A9A; }
+.attitude-acceptance { color: #80DEEA; }
+
+.time-orientation,
+.attitude {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.time-orientation span,
+.attitude span {
+    margin-right: 6px;
+}
